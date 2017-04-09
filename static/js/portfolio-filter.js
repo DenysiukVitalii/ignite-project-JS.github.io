@@ -1,9 +1,13 @@
+var portfolio = document.getElementById('portfolio');
 var items = document.getElementsByClassName('filter-item');
 var works = document.getElementsByClassName('work');
 var wrapperWorks = document.getElementById('works');
 var widthOfWork = getComputedStyle(works[0]).width;
 var heightWrapperWorks = getComputedStyle(wrapperWorks).height;
 var itemFilter;
+var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+
+if (isSafari) portfolio.style.display = 'none';
 
 for (var i = 0; i < items.length; i++) {
     items[i].onclick = function() {
