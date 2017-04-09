@@ -436,7 +436,8 @@ header {
       transform: translate(-50%, -50%); }
   #scroll-to-contact-us h2 {
     margin-top: 40px;
-    font-family: OswaldBold; }
+    font-family: OswaldBold;
+    text-transform: uppercase; }
   #scroll-to-contact-us p {
     margin-bottom: 60px;
     font-family: OswaldLight;

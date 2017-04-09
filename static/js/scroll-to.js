@@ -11,10 +11,10 @@ var SCROLL_DURATION = 200;
 for (var i = 0; i < menuLinks.length; i++) {
   selector = menuLinks[i].dataset.scrollTo;
   element = document.querySelectorAll(selector)[0];
-  collectionOffsetTop[selector] = element.offsetTop;
+  collectionOffsetTop[selector] = element;
   menuLinks[i].onclick = function() {
     if (!isScrolling) {
-    toggleScroll(collectionOffsetTop[this.dataset.scrollTo], scrolled);
+    toggleScroll(collectionOffsetTop[this.dataset.scrollTo].offsetTop, scrolled);
     }
   }
 }
