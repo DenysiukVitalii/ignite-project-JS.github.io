@@ -5,6 +5,7 @@ var selector;
 var element;
 var width = window.innerWidth;
 var scrolled = 0 || window.pageYOffset || document.documentElement.scrollTop;
+var isScrolling = false;
 var SCROLL_DURATION = 200;
 
 for (var i = 0; i < menuLinks.length; i++) {
@@ -12,7 +13,9 @@ for (var i = 0; i < menuLinks.length; i++) {
   element = document.querySelectorAll(selector)[0];
   collectionOffsetTop[selector] = element.offsetTop;
   menuLinks[i].onclick = function() {
+    if (!isScrolling) {
     toggleScroll(collectionOffsetTop[this.dataset.scrollTo], scrolled);
+    }
   }
 }
 
@@ -26,6 +29,7 @@ function toggleScroll(target, scrolled) {
   var initialDistance = distance;
   var speed = 0;
   var step = 2 * distance / Math.pow(SCROLL_DURATION, 2) * 10;
+  isScrolling = true;
 
   var scrollInterval = setInterval(function() {
     distance -= speed;
@@ -37,6 +41,7 @@ function toggleScroll(target, scrolled) {
     var positionY = scrolled < target ? target - distance : target + distance;
     window.scrollTo(0, positionY);
     if (distance <= 0) {
+      isScrolling = false;
       clearInterval(scrollInterval);
     }
   }, 10);
