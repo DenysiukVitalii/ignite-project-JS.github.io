@@ -288,6 +288,7 @@ header {
    h2 {
      margin-top: 0;
      font-family: OswaldBold;
+     color:#000;
    }
    h4 {
      margin-top: 0;
@@ -393,6 +394,7 @@ header {
    }
    h2 {
      font-family: OswaldBold;
+     color:#000;
    }
    p {
      font-family: OswaldLight;
@@ -421,7 +423,7 @@ header {
     left: 50%;
     transform: translateX(-50%);
     margin-top: 50px;
-    @media screen and (min-width: 768px) and (max-width: 992px) {
+    @media screen and (min-width: 768px) and (max-width: 1110px) {
        width: 547px;
     }
 
@@ -570,6 +572,7 @@ header {
       margin-top: 40px;
       font-family: OswaldBold;
       text-transform: uppercase;
+      color:#000;
    }
    p {
      margin-bottom: 60px;
@@ -649,6 +652,7 @@ header {
    }
    h2 {
      font-family: OswaldBold;
+     color:#000;
    }
    p {
      font-family: OswaldLight;
@@ -693,6 +697,7 @@ header {
       margin-top: 30px;
       font-family: OswaldBold;
       text-transform: uppercase;
+      color:#000;
    }
    p {
      margin-bottom: 60px;
@@ -819,6 +824,7 @@ header {
         margin-top: 0;
         font-family: OswaldBold;
         text-transform: uppercase;
+        color: #fff;
      }
      p {
        margin-bottom: 60px;
@@ -875,6 +881,7 @@ header {
    }
    h2 {
      font-family: OswaldBold;
+     color:#000;
    }
    p {
      font-family: OswaldLight;
@@ -976,8 +983,8 @@ header {
           display: block;
           float: left;
           cursor: pointer;
-          width: 6px;
-          height: 6px;
+          width: 7px;
+          height: 7px;
           margin-right: 3px;
           margin-left: 3px;
           background-color: #fff;
@@ -1008,6 +1015,7 @@ header {
    }
    h2 {
      font-family: OswaldBold;
+     color:#000;
    }
    p {
      font-family: OswaldLight;

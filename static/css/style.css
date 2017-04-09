@@ -17,22 +17,44 @@
   background-color: #393f49;
   transition: 0.5s; }
 
+@-webkit-keyframes zoomOut {
+  from {
+    opacity: 1; }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3); }
+  to {
+    opacity: 0; } }
+
 @keyframes zoomOut {
   from {
     opacity: 1; }
   50% {
     opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3); }
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3); }
   to {
     opacity: 0; } }
 .zoomOut {
-  animation-name: zoomOut;
-  animation-fill-mode: forwards; }
+  -webkit-animation-name: zoomOut;
+          animation-name: zoomOut;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
 
 @keyframes zoomIn {
   from {
     opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3); }
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3); }
   50% {
     opacity: 1; } }
 * {
@@ -55,7 +77,9 @@ header {
 @media screen and (min-width: 768px) {
   #menu {
     float: right;
-    transform: translateY(80%); } }
+    -webkit-transform: translateY(80%);
+        -ms-transform: translateY(80%);
+            transform: translateY(80%); } }
 
 #icon-menu {
   margin: 0;
@@ -115,7 +139,9 @@ header {
           width: 5px;
           height: 5px;
           margin: 0 20px;
-          transform: translateY(-75%);
+          -webkit-transform: translateY(-75%);
+              -ms-transform: translateY(-75%);
+                  transform: translateY(-75%);
           background-color: #ffe600; }
         #menu-list li:last-child:after {
           content: '';
@@ -134,7 +160,9 @@ header {
     width: 100%;
     overflow-x: hidden; }
   #slider-section .slider-wrapper {
-    user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
     -webkit-user-select: none;
     width: 9999px; }
     #slider-section .slider-wrapper .slide {
@@ -151,13 +179,17 @@ header {
       position: absolute;
       top: 50%;
       width: 100%;
-      transform: translateY(-50%); }
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
       #slider-section .slider-wrapper .slide-content .slide-text {
         width: 50%;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); }
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
         #slider-section .slider-wrapper .slide-content .slide-text h1 {
           text-transform: uppercase;
           font-size: 4em;
@@ -184,7 +216,9 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
     #slider-section .slider-nav .btn-slide {
       display: inline-block;
       width: 20px;
@@ -219,7 +253,8 @@ header {
   padding: 60px 0; }
   #love-to-do h2 {
     margin-top: 0;
-    font-family: OswaldBold; }
+    font-family: OswaldBold;
+    color: #000; }
   #love-to-do h4 {
     margin-top: 0; }
   #love-to-do p, #love-to-do h2, #love-to-do h3, #love-to-do h4 {
@@ -250,7 +285,9 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     cursor: pointer; }
 
 /*  --- HOW WE DO IT ---  */
@@ -284,7 +321,9 @@ header {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
       cursor: pointer; }
   #how-we-do-it .discription {
     margin-top: 20px;
@@ -300,7 +339,8 @@ header {
   #portfolio p, #portfolio h2, #portfolio h3, #portfolio h4 {
     text-align: center; }
   #portfolio h2 {
-    font-family: OswaldBold; }
+    font-family: OswaldBold;
+    color: #000; }
   #portfolio p {
     font-family: OswaldLight;
     color: #707070;
@@ -320,9 +360,11 @@ header {
     margin-bottom: 50px;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     margin-top: 50px; }
-    @media screen and (min-width: 768px) and (max-width: 992px) {
+    @media screen and (min-width: 768px) and (max-width: 1110px) {
       #portfolio .filter-items {
         width: 547px; } }
     #portfolio .filter-items li {
@@ -352,7 +394,9 @@ header {
             width: 5px;
             height: 5px;
             margin: 0 20px;
-            transform: translateY(-75%);
+            -webkit-transform: translateY(-75%);
+                -ms-transform: translateY(-75%);
+                    transform: translateY(-75%);
             background-color: #ffe600; }
           #portfolio .filter-items li:last-child:after {
             content: '';
@@ -384,33 +428,46 @@ header {
         width: 100%;
         height: 100%;
         background-color: rgba(255, 230, 0, 0.5);
-        animation-fill-mode: forwards;
-        animation-name: zoomOut;
-        animation-duration: 0s; }
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-name: zoomOut;
+                animation-name: zoomOut;
+        -webkit-animation-duration: 0s;
+                animation-duration: 0s; }
         #portfolio #works .work .work-description .wrapper {
           width: 80%;
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
           text-align: center; }
           #portfolio #works .work .work-description .wrapper p, #portfolio #works .work .work-description .wrapper h3 {
             font-family: OswaldRegular;
             text-transform: uppercase;
             color: #fff; }
     #portfolio #works .mouse-enter {
-      user-select: none;
+      -moz-user-select: none;
+       -ms-user-select: none;
+           user-select: none;
       -webkit-user-select: none;
       cursor: pointer; }
       #portfolio #works .mouse-enter .work-description {
-        animation-name: zoomIn;
-        animation-duration: .4s; }
+        -webkit-animation-name: zoomIn;
+                animation-name: zoomIn;
+        -webkit-animation-duration: .4s;
+                animation-duration: .4s; }
         #portfolio #works .mouse-enter .work-description .work-title {
-          animation-name: zoomIn;
-          animation-duration: .4s; }
+          -webkit-animation-name: zoomIn;
+                  animation-name: zoomIn;
+          -webkit-animation-duration: .4s;
+                  animation-duration: .4s; }
     #portfolio #works .mouse-leave .work-description {
-      animation-name: zoomOut;
-      animation-duration: .4s; }
+      -webkit-animation-name: zoomOut;
+              animation-name: zoomOut;
+      -webkit-animation-duration: .4s;
+              animation-duration: .4s; }
 
 /* DO YOU LIKE OUT PORTFOLIO */
 #scroll-to-contact-us {
@@ -424,7 +481,9 @@ header {
     text-decoration: none;
     position: relative;
     transition: .2s;
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
     cursor: pointer; }
     #scroll-to-contact-us .scroll-to-contact:hover {
       color: #fff;
@@ -433,18 +492,23 @@ header {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
   #scroll-to-contact-us h2 {
     margin-top: 40px;
     font-family: OswaldBold;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #000; }
   #scroll-to-contact-us p {
     margin-bottom: 60px;
     font-family: OswaldLight;
     margin-top: 20px;
     font-size: 16px; }
   #scroll-to-contact-us .to-contact-us {
-    user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
     -webkit-user-select: none;
     cursor: pointer;
     color: #fff;
@@ -484,7 +548,9 @@ header {
       position: absolute;
       top: 65%;
       font-size: 16px;
-      transform: translate(-50%, -50%); }
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
     @media screen and (max-width: 992px) {
       #proud-numbers .achievements {
         margin-bottom: 30px; } }
@@ -502,7 +568,8 @@ header {
   #about-us p, #about-us h2, #about-us h3, #about-us h4 {
     text-align: center; }
   #about-us h2 {
-    font-family: OswaldBold; }
+    font-family: OswaldBold;
+    color: #000; }
   #about-us p {
     font-family: OswaldLight;
     color: #707070;
@@ -519,7 +586,9 @@ header {
   #about-us .circle {
     height: 75px;
     width: 75px;
-    transform: translateY(12%); }
+    -webkit-transform: translateY(12%);
+        -ms-transform: translateY(12%);
+            transform: translateY(12%); }
     @media screen and (max-width: 992px) {
       #about-us .circle {
         margin-bottom: 30px; } }
@@ -535,7 +604,8 @@ header {
 #team h2 {
   margin-top: 30px;
   font-family: OswaldBold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #000; }
 #team p {
   margin-bottom: 60px;
   font-family: OswaldLight;
@@ -556,7 +626,9 @@ header {
       content: '';
       position: absolute;
       left: 50%;
-      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
       bottom: -50px;
       border: 30px solid transparent;
       border-bottom: 20px solid #131316; } }
@@ -586,7 +658,9 @@ header {
       position: absolute;
       top: 50%;
       right: 0;
-      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
       cursor: pointer; }
   #team #worker-cards img {
     float: right; }
@@ -613,7 +687,9 @@ header {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
   #team #worker-cards .worker-card {
     position: relative;
     display: none; }
@@ -632,7 +708,8 @@ header {
   #team #skills h2 {
     margin-top: 0;
     font-family: OswaldBold;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #fff; }
   #team #skills p {
     margin-bottom: 60px;
     font-family: OswaldLight;
@@ -643,7 +720,9 @@ header {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     color: #ffe600;
     font-size: 20px; }
   #team #skills .circle-diagram {
@@ -669,7 +748,9 @@ header {
     top: 50%;
     left: 50%;
     color: #ffe600;
-    transform: translate(-50%, -50%); }
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
 
 /*  --- OUR CLIENTS ---  */
 #our-clients {
@@ -677,7 +758,8 @@ header {
   #our-clients p, #our-clients h2, #our-clients h3, #our-clients h4 {
     text-align: center; }
   #our-clients h2 {
-    font-family: OswaldBold; }
+    font-family: OswaldBold;
+    color: #000; }
   #our-clients p {
     font-family: OswaldLight;
     color: #707070;
@@ -695,7 +777,9 @@ header {
     width: 100%;
     overflow-x: hidden; }
     #our-clients .slider-wrapper #slider-clients {
-      user-select: none;
+      -moz-user-select: none;
+       -ms-user-select: none;
+           user-select: none;
       -webkit-user-select: none;
       width: 9999px; }
       #our-clients .slider-wrapper #slider-clients .slide-c {
@@ -748,13 +832,15 @@ header {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%); }
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
   #responses-clients .dots {
     display: block;
     float: left;
     cursor: pointer;
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
     margin-right: 3px;
     margin-left: 3px;
     background-color: #fff; }
@@ -777,7 +863,8 @@ header {
   #contact-us p, #contact-us h2, #contact-us h3, #contact-us h4 {
     text-align: center; }
   #contact-us h2 {
-    font-family: OswaldBold; }
+    font-family: OswaldBold;
+    color: #000; }
   #contact-us p {
     font-family: OswaldLight;
     color: #707070;
@@ -806,7 +893,9 @@ header {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
       cursor: pointer; }
   #contact-us .row p {
     font-size: 20px;
@@ -939,6 +1028,6 @@ footer {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
-
-/*# sourceMappingURL=style.css.map */
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
